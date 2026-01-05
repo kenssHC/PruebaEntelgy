@@ -140,6 +140,34 @@ export class AppFooter extends BaseComponent {
         color: var(--color-text-secondary);
       }
       
+      .facts-section {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-md) 0;
+        margin-top: var(--spacing-md);
+        border-top: 1px solid var(--color-border-light);
+      }
+      
+      .fact-item {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        font-size: var(--font-size-sm);
+        color: var(--color-text-secondary);
+      }
+      
+      .fact-icon {
+        width: 16px;
+        height: 16px;
+        color: var(--color-accent);
+      }
+      
+      .fact-highlight {
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-text-primary);
+      }
+      
       @media (max-width: 768px) {
         .footer {
           padding: var(--spacing-md);
@@ -164,6 +192,12 @@ export class AppFooter extends BaseComponent {
           flex-direction: column;
           gap: var(--spacing-md);
           text-align: center;
+        }
+        
+        .facts-section {
+          flex-direction: column;
+          align-items: center;
+          gap: var(--spacing-sm);
         }
       }
     `;
@@ -209,6 +243,31 @@ export class AppFooter extends BaseComponent {
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
               <span>Region: Americas</span>
+            </div>
+          </div>
+          
+          <div class="facts-section">
+            <div class="fact-item">
+              <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+              <span><span class="fact-highlight">35</span> paises en America</span>
+            </div>
+            <div class="fact-item">
+              <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <span><span class="fact-highlight">1B+</span> habitantes totales</span>
+            </div>
+            <div class="fact-item">
+              <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              <span><span class="fact-highlight">400+</span> idiomas nativos</span>
             </div>
           </div>
         </div>
