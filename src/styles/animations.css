@@ -1,0 +1,242 @@
+/**
+ * Animaciones CSS
+ * 
+ * Animaciones reutilizables para mejorar la experiencia de usuario.
+ * Se utilizan de forma sutil para no sobrecargar la interfaz.
+ */
+
+/* ============================================
+   ANIMACIONES KEYFRAMES
+   ============================================ */
+
+/* Fade In - Aparicion con opacidad */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade In Up - Aparicion desde abajo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down - Aparicion desde arriba */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Left - Aparicion desde la izquierda */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In Right - Aparicion desde la derecha */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale In - Aparicion con escala */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scale Out - Desaparicion con escala */
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Pulse - Efecto de pulso suave */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Shake - Efecto de vibracion para errores */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-4px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(4px);
+  }
+}
+
+/* Spin - Rotacion continua para loaders */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bounce - Efecto de rebote */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Slide In Up - Deslizar desde abajo */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Out Down - Deslizar hacia abajo */
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   CLASES UTILITARIAS DE ANIMACION
+   ============================================ */
+
+/* Animaciones de entrada */
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal) ease forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--transition-normal) ease forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown var(--transition-normal) ease forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft var(--transition-normal) ease forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight var(--transition-normal) ease forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--transition-normal) ease forwards;
+}
+
+/* Animaciones continuas */
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s ease infinite;
+}
+
+/* Animacion de error */
+.animate-shake {
+  animation: shake 0.5s ease;
+}
+
+/* Animaciones de modal/overlay */
+.animate-slide-in-up {
+  animation: slideInUp var(--transition-slow) ease forwards;
+}
+
+.animate-slide-out-down {
+  animation: slideOutDown var(--transition-slow) ease forwards;
+}
+
+/* ============================================
+   DELAYS DE ANIMACION (para stagger effect)
+   ============================================ */
+
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-600 { animation-delay: 600ms; }
+.animation-delay-700 { animation-delay: 700ms; }
+.animation-delay-800 { animation-delay: 800ms; }
+
+/* ============================================
+   PREFERENCIAS DE MOVIMIENTO REDUCIDO
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
