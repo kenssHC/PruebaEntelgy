@@ -7,6 +7,9 @@
 /* Importar sistema de diseno */
 @import './variables.css';
 @import './layout.css';
+@import './animations.css';
+@import './utilities.css';
+@import './components.css';
 
 /* Reset y estilos base */
 *,
