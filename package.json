@@ -1,8 +1,22 @@
 {
-  "name": "pruebaentelgy",
+  "name": "paises-de-america",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Aplicacion web que muestra informacion de 12 paises de America utilizando Web Components nativos y CSS3",
+  "author": "kenssHC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenssHC/PruebaEntelgy.git"
+  },
+  "keywords": [
+    "web-components",
+    "vanilla-js",
+    "rest-countries",
+    "vite",
+    "css3"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,5 +24,8 @@
   },
   "devDependencies": {
     "vite": "^5.4.21"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
