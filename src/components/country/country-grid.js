@@ -50,14 +50,24 @@ export class CountryGrid extends BaseComponent {
   }
 
   /**
-   * Renderiza el estado de carga
+   * Renderiza el estado de carga con skeleton loaders
    */
   renderLoading() {
+    const skeletonCards = Array(12).fill(0).map((_, i) => `
+      <div class="skeleton-card" style="animation-delay: ${i * 50}ms">
+        <div class="skeleton skeleton-flag"></div>
+        <div class="skeleton-body">
+          <div class="skeleton skeleton-title"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text short"></div>
+        </div>
+      </div>
+    `).join('');
+
     this.shadowRoot.innerHTML = `
       <style>${this.styles()}</style>
-      <div class="loading-container">
-        <div class="loading-spinner"></div>
-        <p class="loading-text">Cargando paises de America...</p>
+      <div class="grid">
+        ${skeletonCards}
       </div>
     `;
   }
@@ -154,6 +164,59 @@ export class CountryGrid extends BaseComponent {
       
       @keyframes spin {
         to { transform: rotate(360deg); }
+      }
+      
+      /* Skeleton Loaders */
+      .skeleton-card {
+        background: var(--color-surface);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        animation: fadeIn 0.3s ease backwards;
+      }
+      
+      .skeleton {
+        background: linear-gradient(
+          90deg,
+          var(--color-background) 25%,
+          var(--color-border-light) 50%,
+          var(--color-background) 75%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+      }
+      
+      .skeleton-flag {
+        height: 140px;
+        border-radius: 0;
+      }
+      
+      .skeleton-body {
+        padding: var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+      
+      .skeleton-title {
+        height: 24px;
+        width: 70%;
+        border-radius: var(--radius-sm);
+      }
+      
+      .skeleton-text {
+        height: 16px;
+        width: 100%;
+        border-radius: var(--radius-sm);
+      }
+      
+      .skeleton-text.short {
+        width: 50%;
+      }
+      
+      @keyframes shimmer {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
       }
       
       /* Responsive: 2 columnas en tablet */
