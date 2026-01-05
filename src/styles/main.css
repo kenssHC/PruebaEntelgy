@@ -1,11 +1,14 @@
 /**
  * Paises de America - Estilos principales
  * 
- * Este archivo contendra las importaciones de estilos
- * y estilos globales de la aplicacion.
+ * Importaciones y estilos globales de la aplicacion.
  */
 
-/* Reset basico */
+/* Importar sistema de diseno */
+@import './variables.css';
+@import './layout.css';
+
+/* Reset y estilos base */
 *,
 *::before,
 *::after {
@@ -18,28 +21,104 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #fafafa;
-  color: #1a1a2e;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
 }
 
-/* Utilidades basicas */
-img {
+/* Tipografia base */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.3;
+  color: var(--color-text-primary);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
+h4 { font-size: var(--font-size-lg); }
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Elementos multimedia */
+img, svg, video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-button {
-  cursor: pointer;
+/* Formularios y botones */
+button, input, select, textarea {
   font-family: inherit;
+  font-size: inherit;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Enlaces */
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Focus visible para accesibilidad */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Ocultar visualmente pero mantener accesible */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Contenedor de carga */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+/* Mensaje de error */
+.error-message {
+  padding: var(--spacing-lg);
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  text-align: center;
 }

@@ -1,0 +1,80 @@
+/**
+ * Variables CSS - Sistema de Diseno
+ * Paleta de colores minimalista y moderna
+ */
+
+:root {
+  /* Colores principales */
+  --color-background: #F8F9FA;
+  --color-surface: #FFFFFF;
+  --color-primary: #1A1A2E;
+  --color-secondary: #16213E;
+  --color-accent: #E94560;
+  --color-accent-hover: #D13A54;
+  
+  /* Texto */
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #4A4A68;
+  --color-text-muted: #8888A0;
+  --color-text-inverse: #FFFFFF;
+  
+  /* Bordes y separadores */
+  --color-border: #E8E8EC;
+  --color-border-light: #F0F0F4;
+  
+  /* Estados */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-favorite: #F59E0B;
+  
+  /* Sombras */
+  --shadow-xs: 0 1px 2px rgba(26, 26, 46, 0.04);
+  --shadow-sm: 0 1px 3px rgba(26, 26, 46, 0.08);
+  --shadow-md: 0 4px 12px rgba(26, 26, 46, 0.12);
+  --shadow-lg: 0 8px 24px rgba(26, 26, 46, 0.16);
+  --shadow-xl: 0 16px 48px rgba(26, 26, 46, 0.20);
+  
+  /* Espaciado */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  
+  /* Tipografia */
+  --font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 2rem;     /* 32px */
+  
+  /* Pesos de fuente */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Bordes redondeados */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* Transiciones */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+  
+  /* Z-index */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 900;
+  --z-modal: 1000;
+  --z-tooltip: 1100;
+}

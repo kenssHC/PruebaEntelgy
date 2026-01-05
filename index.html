@@ -4,10 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Aplicacion web de paises de America con informacion de capitales y poblacion" />
+    <meta name="author" content="kenssHC" />
     <title>Paises de America</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
+    <div class="app-container">
+      <!-- Seccion Top: Navegacion secundaria o branding -->
+      <section class="top-section" aria-label="Barra superior">
+        <app-top></app-top>
+      </section>
+
+      <!-- Seccion Header: Encabezado principal con titulo -->
+      <header class="header-section">
+        <app-header></app-header>
+      </header>
+
+      <!-- Seccion Content: Contenedor principal -->
+      <main class="content-section">
+        <div class="main-content">
+          <!-- Grilla de paises 3x4 -->
+          <country-grid></country-grid>
+        </div>
+      </main>
+
+      <!-- Seccion Footer: Informacion adicional y estadisticas -->
+      <footer class="footer-section">
+        <app-footer></app-footer>
+      </footer>
+
+      <!-- Seccion Bottom: Pie de pagina con creditos -->
+      <section class="bottom-section" aria-label="Pie de pagina">
+        <app-bottom></app-bottom>
+      </section>
+    </div>
+
+    <!-- Modal para detalles de pais -->
+    <country-modal></country-modal>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
