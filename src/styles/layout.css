@@ -43,6 +43,13 @@
   border-radius: 8px;
 }
 
+/* Wrapper de favoritos */
+.favorites-wrapper {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border-light);
+}
+
 /* Seccion Footer */
 .footer-section {
   flex-shrink: 0;

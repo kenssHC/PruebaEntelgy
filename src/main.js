@@ -16,6 +16,7 @@ import './components/layout/app-bottom.js';
 // Componentes de paises
 import './components/country/country-grid.js';
 import './components/country/country-modal.js';
+import './components/country/favorites-section.js';
 
 // Inicializacion de la aplicacion
 console.log('Paises de America - Aplicacion iniciada');
